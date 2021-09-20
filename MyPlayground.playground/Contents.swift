@@ -86,5 +86,31 @@ for _ in 1...wordToGuess.count {
 print("\(wordToGuess) will show as '\(revealedWord)'")
 
 // Create a String from a repeating value
-revealedWord = "_" + String(repeating: " _", count: wordToGuess.count-1)
-print ("using repeating String: '\(revealedWord)'")
+
+var repeatingRevealedWord =  "_" + String(repeating: " _", count: wordToGuess.count-1)
+print (repeatingRevealedWord)
+
+// Reveal the word
+print("\nReveal the word")
+
+wordToGuess = "SWIFT"
+var letterGuessed = "SQFTX"
+revealedWord = ""
+
+// loop through all letter in wordToGuess
+for letter in wordToGuess {
+            // check if letter in wordtoguess is inletterguessed
+    if letterGuessed.contains(letter) {
+            // if so add this letter + a blank space, to revealWord
+            revealedWord = revealedWord + "/()"
+    } else {
+        // if not add an underscore + a blank space to revealedword
+            revealedWord = revealedWord + "_ "
+    }
+}
+// remove the extra space at the end of revealedWord
+revealedWord.removeLast()
+
+print("wordToGuess = \(wordToGuess)")
+print("lettersGuessed = \(letterGuessed)")
+print("revealedWord = \(revealedWord)")
