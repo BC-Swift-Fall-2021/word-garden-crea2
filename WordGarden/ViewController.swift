@@ -38,7 +38,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func doneKeyPressed(_ sender: UITextField) {
-        // this dismisses teh keyboard
+        // this dismisses the keyboard
     updateUIAfterGuess()
     }
     
